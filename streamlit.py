@@ -15,3 +15,12 @@ st.write("Streamlit lets us turn Python code into interactive web application")
 
 st.markdown("### Markdown also works")
 st.caption("This is a small caption.")
+
+### Code, JSON and metric
+st.code("print('Hello, Streamlit!!')", language="python")
+st.json({
+    "Course": "Python",
+    "Level": "Beginner"
+})
+
+st.metric("Students", 25, "+5")
