@@ -1,11 +1,17 @@
 import streamlit as st
 
-## page configuration
+## Page configuration
 st.set_page_config(
-    page_title="Pyhton crash course",
+    page_title="Python crash course",
     page_icon="🐍",
     layout="wide"
 )
 
+## Title, header, sub-header and text
 st.title("Pyhton Applications crash course")
-st.header("Steamlit Basics")
+st.header("Streamlit Basics")
+st.subheader("Build simple web application with python")
+st.write("Streamlit lets us turn Python code into interactive web application")
+
+st.markdown("### Markdown also works")
+st.caption("This is a small caption.")
