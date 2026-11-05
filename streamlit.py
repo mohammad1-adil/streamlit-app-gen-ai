@@ -33,3 +33,8 @@ topic = st.sidebar.selectbox(
     ["Pyhton", "Pandas", "Numpy", "AI Applications"]
 )
 st.write("Selected topic:", topic)
+
+## Text input
+name = st.text_input("What is your name:")
+if name:
+    st.write(f"Hello, {name}!")
