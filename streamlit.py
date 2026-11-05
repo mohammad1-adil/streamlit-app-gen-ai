@@ -28,3 +28,7 @@ st.metric("Students", 25, "+5")
 ## Sidebar
 st.sidebar.title("Course Menu")
 st.sidebar.write("Choose an option below.")
+st.sidebar.selectbox(
+    "Choose a topic",
+    ["Pyhton", "Pandas", "Numpy", "AI Applications"]
+)
