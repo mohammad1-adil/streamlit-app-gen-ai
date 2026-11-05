@@ -32,4 +32,4 @@ topic = st.sidebar.selectbox(
     "Choose a topic",
     ["Pyhton", "Pandas", "Numpy", "AI Applications"]
 )
-st.sidebar.write("Selected topic:", topic)
+st.write("Selected topic:", topic)
