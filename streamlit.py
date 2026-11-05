@@ -38,3 +38,13 @@ st.write("Selected topic:", topic)
 name = st.text_input("What is your name:")
 if name:
     st.write(f"Hello, {name}!")
+
+
+## Number input
+age = st.number_input(
+    "Enter your age:",
+    min_value=1,
+    max_value=100,
+    value=32
+)
+st.write(f"Your age is: ", age)
