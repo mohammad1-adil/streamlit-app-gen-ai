@@ -63,3 +63,12 @@ st.write("Confidence:", confidence)
 show_detail = st.checkbox("Show course details")
 if show_detail:
     st.info("This course you prepares to build python applications for AI")
+
+## Radio buttons
+st.radio(
+    "Your python experience",
+    ["Beginner", "Intermediate", "Advanced"]
+)
+
+
+
