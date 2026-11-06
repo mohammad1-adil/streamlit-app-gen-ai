@@ -71,5 +71,18 @@ experience = st.radio(
 )
 st.write("Selected: ", experience)
 
+## Selectbox and multi-select
+language = st.selectbox(
+    "Choose your programming language",
+    ["Python", "Java", "Java-script", "C++"]
+)
+
+skills = st.multiselect(
+    "Choose your skills",
+    ["Pyhton", "Pandas", "Numpy", "Streamlit", "gen-ai"]
+)
+
+st.write("Langauage:", language)
+st.write("Skills:", skills)
 
 
