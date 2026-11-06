@@ -48,3 +48,13 @@ age = st.number_input(
     value=32
 )
 st.write(f"Your age is: ", age)
+
+
+## Slider
+confidence = st.slider(
+    "Choose a confidence score",
+    min_value=1,
+    max_value=100,
+    value=50
+)
+st.write("Confidence:", confidence)
