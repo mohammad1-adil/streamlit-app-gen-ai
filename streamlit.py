@@ -69,7 +69,7 @@ experience = st.radio(
     "Your python experience",
     ["Beginner", "Intermediate", "Advanced"]
 )
-st.write("Selected", experience)
+st.write("Selected: ", experience)
 
 
 
