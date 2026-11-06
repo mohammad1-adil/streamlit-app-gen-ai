@@ -58,3 +58,6 @@ confidence = st.slider(
     value=50
 )
 st.write("Confidence:", confidence)
+
+## Checkbox
+st.checkbox("Show course details")
