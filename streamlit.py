@@ -84,3 +84,7 @@ skills = st.multiselect(
 
 st.write("Langauage:", language)
 st.write("Skills:", skills)
+
+## Button
+if st.button("Click me"):
+    st.success("Button clicked successfully!!")
