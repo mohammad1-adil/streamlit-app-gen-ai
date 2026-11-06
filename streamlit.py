@@ -60,4 +60,6 @@ confidence = st.slider(
 st.write("Confidence:", confidence)
 
 ## Checkbox
-st.checkbox("Show course details")
+show_detail = st.checkbox("Show course details")
+if show_detail:
+    st.info("This course you prepares to build python applications for AI")
