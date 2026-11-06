@@ -84,5 +84,3 @@ skills = st.multiselect(
 
 st.write("Langauage:", language)
 st.write("Skills:", skills)
-
-
