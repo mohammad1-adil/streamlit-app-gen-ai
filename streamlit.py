@@ -65,10 +65,11 @@ if show_detail:
     st.info("This course you prepares to build python applications for AI")
 
 ## Radio buttons
-st.radio(
+experience = st.radio(
     "Your python experience",
     ["Beginner", "Intermediate", "Advanced"]
 )
+st.write("Selected", experience)
 
 
 
