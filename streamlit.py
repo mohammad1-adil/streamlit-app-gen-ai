@@ -1,107 +1,139 @@
 import streamlit as st
 
-## Page configuration
+# ------------------------------------------------------------
+# 1. Page configuration
+# ------------------------------------------------------------
 st.set_page_config(
-    page_title="Python crash course",
+    page_title="Python Crash Course",
     page_icon="🐍",
     layout="wide"
 )
 
-## Title, header, sub-header and text
-st.title("Pyhton Applications crash course")
+# ------------------------------------------------------------
+# 2. Title, header, subheader and text
+# ------------------------------------------------------------
+st.title("Python Applications Crash Course")
 st.header("Streamlit Basics")
-st.subheader("Build simple web application with python")
-st.write("Streamlit lets us turn Python code into interactive web application")
+st.subheader("Build simple web applications with Python")
+
+st.write("Streamlit lets us turn Python code into an interactive web application.")
 
 st.markdown("### Markdown also works")
 st.caption("This is a small caption.")
 
-### Code, JSON and metric
-st.code("print('Hello, Streamlit!!')", language="python")
+# ------------------------------------------------------------
+# 3. Code, JSON and metric
+# ------------------------------------------------------------
+st.code("print('Hello, Streamlit!')", language="python")
+
 st.json({
-    "Course": "Python",
-    "Level": "Beginner"
+    "course": "Python",
+    "level": "Beginner"
 })
 
 st.metric("Students", 25, "+5")
 
-## Sidebar
+# ------------------------------------------------------------
+# 4. Sidebar
+# ------------------------------------------------------------
 st.sidebar.title("Course Menu")
 st.sidebar.write("Choose an option below.")
+
 topic = st.sidebar.selectbox(
     "Choose a topic",
-    ["Pyhton", "Pandas", "Numpy", "AI Applications"]
+    ["Python", "Pandas", "NumPy", "AI Applications"]
 )
+
 st.write("Selected topic:", topic)
 
-## Text input
-name = st.text_input("What is your name:")
+# ------------------------------------------------------------
+# 5. Text input
+# ------------------------------------------------------------
+name = st.text_input("What is your name?")
+
 if name:
     st.write(f"Hello, {name}!")
 
-
-## Number input
+# ------------------------------------------------------------
+# 6. Number input
+# ------------------------------------------------------------
 age = st.number_input(
-    "Enter your age:",
+    "Enter your age",
     min_value=1,
     max_value=100,
-    value=32
+    value=18
 )
-st.write(f"Your age is: ", age)
 
+st.write("Your age is:", age)
 
-## Slider
+# ------------------------------------------------------------
+# 7. Slider
+# ------------------------------------------------------------
 confidence = st.slider(
     "Choose a confidence score",
-    min_value=1,
+    min_value=0,
     max_value=100,
     value=50
 )
+
 st.write("Confidence:", confidence)
 
-## Checkbox
-show_detail = st.checkbox("Show course details")
-if show_detail:
-    st.info("This course you prepares to build python applications for AI")
+# ------------------------------------------------------------
+# 8. Checkbox
+# ------------------------------------------------------------
+show_details = st.checkbox("Show course details")
 
-## Radio buttons
+if show_details:
+    st.info("This course prepares you to build Python applications for AI.")
+
+# ------------------------------------------------------------
+# 9. Radio buttons
+# ------------------------------------------------------------
 experience = st.radio(
-    "Your python experience",
+    "Your Python experience",
     ["Beginner", "Intermediate", "Advanced"]
 )
-st.write("Selected: ", experience)
 
-## Selectbox and multi-select
+st.write("Selected:", experience)
+
+# ------------------------------------------------------------
+# 10. Selectbox and multiselect
+# ------------------------------------------------------------
 language = st.selectbox(
-    "Choose your programming language",
-    ["Python", "Java", "Java-script", "C++"]
+    "Choose a programming language",
+    ["Python", "Java", "JavaScript", "C++"]
 )
 
 skills = st.multiselect(
     "Choose your skills",
-    ["Pyhton", "Pandas", "Numpy", "Streamlit", "gen-ai"]
+    ["Python", "Pandas", "NumPy", "Streamlit", "Git"]
 )
 
-st.write("Langauage:", language)
+st.write("Language:", language)
 st.write("Skills:", skills)
 
-## Button
-if st.button("Click me"):
-    st.success("Button clicked successfully!!")
+# ------------------------------------------------------------
+# 11. Button
+# ------------------------------------------------------------
+if st.button("Click Me"):
+    st.success("Button clicked successfully!")
 
-
-## Form
+# ------------------------------------------------------------
+# 12. Form
+# ------------------------------------------------------------
 with st.form("student_form"):
-    st.write("Student Ragistration")
+    st.write("Student Registration")
 
     student_name = st.text_input("Student name")
-    student_email = st.write("Email")
-    submitted = st.form_submit_button("Ragistration")
+    student_email = st.text_input("Email")
+    submitted = st.form_submit_button("Register")
 
     if submitted:
-        st.success(f"Ragistration received for {student_name}")
+        st.success(f"Registration received for {student_name}")
 
-## Columns
+# ------------------------------------------------------------
+# 13. Columns
+# ------------------------------------------------------------
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -119,8 +151,22 @@ with col3:
 with st.expander("Show more information"):
     st.write("Expanders are useful when we want to hide details until needed.")
 
+# ------------------------------------------------------------
+# 15. Status messages
+# ------------------------------------------------------------
+st.success("Success message")
+st.info("Information message")
+st.warning("Warning message")
+st.error("Error message")
 
-## File uploader
+# ------------------------------------------------------------
+# 16. Progress bar
+# ------------------------------------------------------------
+st.progress(70)
+
+# ------------------------------------------------------------
+# 17. File uploader
+# ------------------------------------------------------------
 uploaded_file = st.file_uploader(
     "Upload a text file",
     type=["txt"]
@@ -129,3 +175,15 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     content = uploaded_file.read().decode("utf-8")
     st.text_area("Uploaded content", content, height=150)
+
+# ------------------------------------------------------------
+# 18. Download button
+# ------------------------------------------------------------
+sample_text = "Hello from our Python application!"
+
+st.download_button(
+    label="Download sample text",
+    data=sample_text,
+    file_name="sample.txt",
+    mime="text/plain"
+)
