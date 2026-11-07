@@ -126,6 +126,6 @@ uploaded_file = st.file_uploader(
     type=["txt"]
 )
 
-if uploaded_file not in None:
+if uploaded_file is not None:
     content = uploaded_file.read().decode("utf-8")
     st.text_area("Uploaded content", content, height=150)
