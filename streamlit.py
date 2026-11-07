@@ -118,3 +118,14 @@ with col3:
 # ------------------------------------------------------------
 with st.expander("Show more information"):
     st.write("Expanders are useful when we want to hide details until needed.")
+
+
+## File uploader
+uploaded_file = st.file_uploader(
+    "Upload a text file",
+    type=["txt"]
+)
+
+if uploaded_file not in None:
+    content = uploaded_file.read().decode("utf-8")
+    st.text_area("Uploaded content", content, height=150)
