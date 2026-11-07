@@ -100,3 +100,15 @@ with st.form("student_form"):
 
     if submitted:
         st.success(f"Ragistration received for {student_name}")
+
+## Columns
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.info("Python")
+
+with col2:
+    st.info("Pandas")
+
+with col3:
+    st.info("NumPy")
