@@ -112,3 +112,9 @@ with col2:
 
 with col3:
     st.info("NumPy")
+
+# ------------------------------------------------------------
+# 14. Expander
+# ------------------------------------------------------------
+with st.expander("Show more information"):
+    st.write("Expanders are useful when we want to hide details until needed.")
