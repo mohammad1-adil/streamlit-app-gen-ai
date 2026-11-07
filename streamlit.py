@@ -88,3 +88,15 @@ st.write("Skills:", skills)
 ## Button
 if st.button("Click me"):
     st.success("Button clicked successfully!!")
+
+
+## Form
+with st.form("student_form"):
+    st.write("Student Ragistration")
+
+    student_name = st.text_input("Student name")
+    student_email = st.write("Email")
+    submitted = st.form_submit_button("Ragistration")
+
+    if submitted:
+        st.success(f"Ragistration received for {student_name}")
